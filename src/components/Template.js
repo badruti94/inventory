@@ -1,14 +1,15 @@
-import {useEffect} from 'react'
-import { useNavigate} from 'react-router-dom'
+import { useEffect } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { Container } from 'reactstrap'
 import Navbar from './CustomNavbar'
 import Footer from './Footer'
 
 const Template = ({ children }) => {
     const navigate = useNavigate()
+    const location = useLocation()
 
     useEffect(() => {
-        if (!localStorage.getItem('login')) {
+        if (!localStorage.getItem('login') && location.pathname !== '/register') {
             navigate('/login')
         }
     }, [])

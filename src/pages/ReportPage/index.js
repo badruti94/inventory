@@ -128,12 +128,12 @@ const ReportPage = () => {
                                     </FormGroup>
                                 </Col>
                                 <Col md={2}>
-                                    <Button color='primary' type='submit' onClick={handleFilter}>
+                                    <Button color='primary' onClick={handleFilter}>
                                         Filter
                                     </Button>
                                 </Col>
                                 <Col md={2}>
-                                    <Button color='danger' type='submit' onClick={handlePrint}>
+                                    <Button color='danger' onClick={handlePrint}>
                                         <i className="fa fa-file-pdf"></i> Export
                                     </Button>
                                 </Col>
